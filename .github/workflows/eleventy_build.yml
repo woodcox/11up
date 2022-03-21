@@ -5,7 +5,7 @@ on: [push]
 env:
   UPDATE_NPM: false # false = deploy eleventy , true = update npm
   NPM_ENV: production
-  ELEVENTY_ENV: prod
+  ELEVENTY_ENV: dev
 
 jobs:
   build_deploy_eleventy:
