@@ -25,7 +25,7 @@
     "type": "git",
     "url": "git+https://github.com/woodcock3/11up.git"
   },
-  "keywords": [Eleventy, 11ty, Tailwind, Alpine, Starter],
+  "keywords": [Eleventy, 11ty, Tailwind, Alpine, Starter,],
   "author": "woodcock3",
   "license": "ISC",
   "bugs": {
