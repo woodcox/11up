@@ -4,10 +4,9 @@
     "dev:tailwind": "npx tailwindcss -i assets/css/tailwind.css -c assets/css/tailwind.config.js -o ./_tmp/style.css --watch",
     "build:eleventy": "ELEVENTY_ENV=prod npx @11ty/eleventy",
     "build:tailwind": "npx tailwindcss -i assets/css/tailwind.css -c assets/css/tailwind.config.js -o ./_tmp/style.css",
-    "deploy:eleventy": "ELEVENTY_ENV=deploy npx @11ty/eleventy",
-    "deploybuild:tailwind": "npx tailwindcss -i assets/css/tailwind.css -c assets/css/tailwind.config.js -o ./_tmp/style.css --minify",
-    "deploy": "NODE_ENV=production npm-run-all deploy:tailwind deploy:eleventy",
+    "minify:tailwind": "npx tailwindcss -i assets/css/tailwind.css -c assets/css/tailwind.config.js -o ./_tmp/style.css --minify",
     "build": "NODE_ENV=dev npm-run-all build:tailwind build:eleventy",
+    "minify": "NODE_ENV=production npm-run-all build:tailwind minify:eleventy",
     "start": "npm-run-all --parallel dev:*"
   },
   "devDependencies": {
