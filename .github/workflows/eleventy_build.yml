@@ -19,7 +19,6 @@ jobs:
       - run: |
           touch .env
           echo ELEVENTY_ENV=prod >> .env
-        if: env.UPDATE_NPM != 'true'
       - name: Build 11ty
         if: env.UPDATE_NPM != 'true'
         uses: woodcock3/actions-eleventy@master
