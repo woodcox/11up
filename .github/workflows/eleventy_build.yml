@@ -3,7 +3,9 @@ on: [push]
 
 # Conditional environmental if's      
 env:
-  UPDATE_NPM: true # false = deploy eleventy , true = update npm
+  UPDATE_NPM: false # false = deploy eleventy , true = update npm
+  NPM_ENV: production
+  ELEVENTY_ENV: prod
 
 jobs:
   build_deploy_eleventy:
@@ -14,6 +16,10 @@ jobs:
         if: env.UPDATE_NPM != 'true'
         uses: actions/checkout@v2
       - name: Build 11ty
+        run: |
+          touch .env
+          echo NPM_ENV >> .env
+          echo ELEVENTY_ENV >> .env
         if: env.UPDATE_NPM != 'true'
         uses: woodcock3/actions-eleventy@master
         with:
