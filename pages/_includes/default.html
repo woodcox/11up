@@ -23,8 +23,10 @@
   </head>
   <body>
     {% include "./partials/navbar.html" %}
-
+    
+    {% block content %}
     {{ content | safe }}
+    {% endblock %}
 
     {% include "./partials/footer.html" %}
 
