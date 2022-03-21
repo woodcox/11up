@@ -15,6 +15,10 @@ jobs:
       - name: checkout
         if: env.UPDATE_NPM != 'true'
         uses: actions/checkout@v2
+      - name: create env file
+        run: |
+          touch .env
+          echo ELEVENTY_ENV=${{ env.ELEVENTY_ENV }} >> .env
       - name: Build 11ty
         if: env.UPDATE_NPM != 'true'
         uses: woodcock3/actions-eleventy@master
