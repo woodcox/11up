@@ -19,8 +19,8 @@ jobs:
         if: env.UPDATE_NPM != 'true'
         uses: |
           touch .env
-          echo NPM_ENV >> .env
-          echo ELEVENTY_ENV >> .env
+          echo NPM_ENV=production >> .env
+          echo ELEVENTY_ENV=prod >> .env
           woodcock3/actions-eleventy@master
         with:
           args: --output _dist --pathprefix /11up/
