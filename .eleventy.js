@@ -2,9 +2,6 @@ const yaml = require("js-yaml");
 const htmlmin = require('html-minifier');
 const now = String(Date.now());
 
-// Set ELEVENTY_ENV
-process.env.ELEVENTY_ENV = 'prod';
-
 module.exports = function (eleventyConfig) {
   // Disable automatic use of your .gitignore
   eleventyConfig.setUseGitIgnore(false);
