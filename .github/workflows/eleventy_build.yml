@@ -15,13 +15,14 @@ jobs:
       - name: checkout
         if: env.UPDATE_NPM != 'true'
         uses: actions/checkout@v2
+      - name: create env file
+      - run: |
+          touch .env
+          echo ELEVENTY_ENV=prod >> .env
+        if: env.UPDATE_NPM != 'true'
       - name: Build 11ty
         if: env.UPDATE_NPM != 'true'
-        uses: |
-          touch .env
-          echo NPM_ENV=production >> .env
-          echo ELEVENTY_ENV=prod >> .env
-          woodcock3/actions-eleventy@master
+        uses: woodcock3/actions-eleventy@master
         with:
           args: --output _dist --pathprefix /11up/
           install_dependencies: true
