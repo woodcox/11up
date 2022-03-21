@@ -16,12 +16,12 @@ jobs:
         if: env.UPDATE_NPM != 'true'
         uses: actions/checkout@v2
       - name: Build 11ty
-        run: |
+        if: env.UPDATE_NPM != 'true'
+        uses: |
           touch .env
           echo NPM_ENV >> .env
           echo ELEVENTY_ENV >> .env
-        if: env.UPDATE_NPM != 'true'
-        uses: woodcock3/actions-eleventy@master
+          woodcock3/actions-eleventy@master
         with:
           args: --output _dist --pathprefix /11up/
           install_dependencies: true
