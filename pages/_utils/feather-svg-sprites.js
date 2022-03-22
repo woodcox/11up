@@ -15,7 +15,6 @@ const ICONS_LIST = {
   phone: 'Phone',
   mail: 'Email',
   info: 'Info',
-  
   wifi: 'Online',
   'wifi-off': 'Offline',
   search: 'Search',
