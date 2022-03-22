@@ -8,9 +8,14 @@ const ICONS_FOLDER = 'node_modules/feather-icons/dist/icons/';
 // Which icons do I need for the sprite?
 // icon filename + title for accessibility
 const ICONS_LIST = {
-  calendar: 'Date',
+  external-link: 'External Link',
+  github: 'GitHub',
+  facebook: 'Facebook',
+  instagram: 'Instagram',
+  phone: 'Phone',
+  mail: 'Email',
   info: 'Info',
-  link: 'Link',
+  
   wifi: 'Online',
   'wifi-off': 'Offline',
   search: 'Search',
