@@ -17,7 +17,7 @@
     "tailwindcss": "^3.0.0",
     "@builder.io/partytown": "^0.5.0",
     "@tannerhodges/snap-slider": "^2.0.3",
-    "lucide": "^0.17.13"
+    "svg-sprite"; "^1.5.4"
   },
   "name": "11up",
   "description": "A starter repository showing how to build a website with the [Eleventy](https://www.11ty.dev), [Tailwind CSS](https://tailwindcss.com), and [Alpine.js](https://alpinejs.dev).",
