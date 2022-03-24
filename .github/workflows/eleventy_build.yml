@@ -25,7 +25,7 @@ jobs:
         with:
           args: --output _dist --pathprefix /11up/
           install_dependencies: true
-          build_script: build
+          build_script: npm i @11ty/eleventy alpinejs html-minifier npm-run-all tailwindcss @builder.io/partytown @tannerhodges/snap-slider hyperscript.org
       - name: Deploy
         if: env.UPDATE_NPM != 'true'
         uses: peaceiris/actions-gh-pages@v3
