@@ -3,7 +3,7 @@ on: [push]
 
 # Conditional environmental if's      
 env:
-  UPDATE_NPM: false # false = deploy eleventy , true = update npm
+  UPDATE_NPM: true # false = deploy eleventy , true = update npm
   NPM_ENV: production
   ELEVENTY_ENV: dev
 
@@ -25,7 +25,7 @@ jobs:
         with:
           args: --output _dist --pathprefix /11up/
           install_dependencies: true
-          build_script: npm i @11ty/eleventy alpinejs html-minifier npm-run-all tailwindcss @builder.io/partytown @tannerhodges/snap-slider hyperscript.org
+          build_script: npm i && build
       - name: Deploy
         if: env.UPDATE_NPM != 'true'
         uses: peaceiris/actions-gh-pages@v3
@@ -54,7 +54,7 @@ jobs:
         if: env.UPDATE_NPM == 'true'
       - run: npm install
         if: env.UPDATE_NPM == 'true'
-      # - run: npm uninstall
+      # - run: npm uninstall @11ty/eleventy alpinejs html-minifier npm-run-all tailwindcss @builder.io/partytown @tannerhodges/snap-slider
       # - run: npm update # update packages
       - name: pull request on npm update
         if: env.UPDATE_NPM == 'true'
