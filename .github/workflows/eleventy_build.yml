@@ -52,7 +52,7 @@ jobs:
           node-version: '16'
       - run: npm init -y
         if: env.UPDATE_NPM == 'true'
-      - run: npm uninstall svg-sprite lucide
+      - run: npm install
         if: env.UPDATE_NPM == 'true'
       # - run: npm uninstall @11ty/eleventy alpinejs html-minifier npm-run-all tailwindcss @builder.io/partytown @tannerhodges/snap-slider
       # - run: npm update # update packages
