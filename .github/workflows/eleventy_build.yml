@@ -7,17 +7,9 @@ env:
   NPM_ENV: production
   ELEVENTY_ENV: dev
 
-name: CI for Netlify sites
-
-on:
-  pull_request:
-    branches:
-      - main
-
 jobs:
-  build:
+  build_deploy_eleventy:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
         with:
