@@ -27,7 +27,7 @@ jobs:
         if: env.UPDATE_NPM != 'true'
         uses: peaceiris/actions-gh-pages@v3
         with:
-          publish_dir: ./_dist 
+          publish_dir: ./dist 
           publish_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
