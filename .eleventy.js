@@ -18,7 +18,7 @@ module.exports = function (eleventyConfig) {
     "./pages/admin/config.yml": "./admin/config.yml",
     "./node_modules/alpinejs/dist/cdn.min.js": './assets/js/alpine.js',
     "./node_modules/hyperscript.org/dist/cdn.min.js": './assets/js/hyperscript.js',
-    "./node_modules/partytown/dist/cdn.min.js": './assets/js/partytown.js',
+    "./node_modules/@builder.io/partytown/dist/cdn.min.js": './assets/js/partytown.js',
   });
 
   // Copy Image Folder to /_site
