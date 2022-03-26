@@ -4,22 +4,24 @@ on: [push]
 # Conditional environmental if's      
 env:
   UPDATE_NPM: false # false = deploy eleventy , true = update npm
-  NPM_ENV: production
-  ELEVENTY_ENV: dev
 
 jobs:
   build_deploy_eleventy:
     runs-on: ubuntu-latest
     steps:
+      - run: echo ${{ env.UPDATE_NPM }}
       - uses: actions/checkout@v2
+        if: env.UPDATE_NPM != 'true'
         with:
           fetch-depth: 1
       - name: Use Node.js 16.x
+        if: env.UPDATE_NPM != 'true'
         uses: actions/setup-node@v2
         with:
           node-version: '16'
           cache: 'npm'
       - name: Install & Build
+        if: env.UPDATE_NPM != 'true'
         run: |
           npm ci
           npm run build
@@ -75,8 +77,8 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '16'
-      - run: npm init -y
-        if: env.UPDATE_NPM == 'true'
+      # - run: npm init -y
+      #  if: env.UPDATE_NPM == 'true'
       - run: npm install
         if: env.UPDATE_NPM == 'true'
       # - run: npm uninstall @11ty/eleventy alpinejs html-minifier npm-run-all tailwindcss @builder.io/partytown @tannerhodges/snap-slider
