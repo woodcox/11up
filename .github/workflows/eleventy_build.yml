@@ -23,7 +23,7 @@ jobs:
       - name: Install & Build
         if: env.UPDATE_NPM != 'true'
         run: |
-          npm ci
+          npm install
           npm run build
       - name: Deploy
         if: env.UPDATE_NPM != 'true'
