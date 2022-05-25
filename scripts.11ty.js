@@ -16,7 +16,7 @@ module.exports = class {
       entryPoints: ['./assests/js/'],
       bundle: true,
       minify: isProduction,
-      outdir: '_site/assests/js',
+      outdir: '.dist/assests/js',
       sourcemap: !isProduction,
       target: isProduction ? 'es6' : 'esnext'
     })
