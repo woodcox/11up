@@ -13,10 +13,10 @@ module.exports = class {
 
   async render() {
     await esbuild.build({
-      entryPoints: ['./assests/js/'],
+      entryPoints: ['./assets/js/'],
       bundle: true,
       minify: isProduction,
-      outdir: '.dist/assests/js',
+      outdir: '.dist/assets/js',
       sourcemap: !isProduction,
       target: isProduction ? 'es6' : 'esnext'
     })
