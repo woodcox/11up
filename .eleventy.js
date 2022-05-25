@@ -35,11 +35,8 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({ './_tmp/style.css': './assets/css/style.css' })
   
+  // Watch the js files for esbuild in scripts.11ty.js
   eleventyConfig.addWatchTarget('./assets/js/')
-
-  return {
-    templateFormats: ['md', '11ty.js']
-  }
 
   // Shortcodes
   // Add cache busting with {% version %} time string
@@ -79,6 +76,7 @@ module.exports = function (eleventyConfig) {
     markdownTemplateEngine: 'njk',
     dataTemplateEngine: 'njk',
     htmlTemplateEngine: 'njk',
+    templateFormats: ['md', '11ty.js'],
     dir: {
       input: 'pages',
       output: 'dist',
