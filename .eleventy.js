@@ -34,7 +34,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({ './_tmp/style.css': './assets/css/style.css' })
   
-  //
+  // runs the esbuild script.11ty.js
   eleventyConfig.addWatchTarget('./assests/js/');
   return {
     templateFormats: ['md', '11ty.js']
