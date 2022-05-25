@@ -33,6 +33,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget('./assets/css/tailwind.css');
 
   eleventyConfig.addPassthroughCopy({ './_tmp/style.css': './assets/css/style.css' })
+  
+  //
+  eleventyConfig.addWatchTarget('./assests/js/');
+  return {
+    templateFormats: ['md', '11ty.js']
+  }
 
   // Shortcodes
   // Add cache busting with {% version %} time string
