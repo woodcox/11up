@@ -76,7 +76,6 @@ module.exports = function (eleventyConfig) {
     markdownTemplateEngine: 'njk',
     dataTemplateEngine: 'njk',
     htmlTemplateEngine: 'njk',
-    templateFormats: ['md', '11ty.js'],
     dir: {
       input: 'pages',
       output: 'dist',
