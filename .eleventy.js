@@ -1,7 +1,6 @@
 const yaml = require("js-yaml");
 const htmlmin = require('html-minifier');
 const now = String(Date.now());
-const esbuild = require("esbuild");
 
 module.exports = function (eleventyConfig) {
   // Disable automatic use of your .gitignore
@@ -20,7 +19,6 @@ module.exports = function (eleventyConfig) {
     "./assets/js/site.js": "./assets/js/site.js",
     "./node_modules/alpinejs/dist/cdn.min.js": './assets/js/alpine.js',
     "./node_modules/hyperscript.org/dist/_hyperscript_w9y.min.js": './assets/js/hyperscript.js',
-    "./node_modules/@builder.io/partytown/dist/cdn.min.js": './assets/js/partytown.js',
   });
 
   // Copy Image Folder to /_site
