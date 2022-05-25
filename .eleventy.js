@@ -1,6 +1,7 @@
 const yaml = require("js-yaml");
 const htmlmin = require('html-minifier');
 const now = String(Date.now());
+const esbuild = require("esbuild");
 
 module.exports = function (eleventyConfig) {
   // Disable automatic use of your .gitignore
@@ -34,11 +35,6 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({ './_tmp/style.css': './assets/css/style.css' })
   
-  // runs the esbuild script.11ty.js
-  eleventyConfig.addWatchTarget('./assests/js/');
-  return {
-    templateFormats: ['md', '11ty.js']
-  }
 
   // Shortcodes
   // Add cache busting with {% version %} time string
