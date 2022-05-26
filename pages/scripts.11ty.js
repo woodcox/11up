@@ -12,7 +12,7 @@ module.exports = class {
   async render() {
     await esbuild.build({
       entryPoints: ['assets/js/*.js'],
-      bundle: true
+      bundle: true,
       minify: isProd,
       outdir: './dist/assets/js/esb.js',
       sourcemap: !isProd,
