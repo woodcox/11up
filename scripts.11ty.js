@@ -1,7 +1,5 @@
 const esbuild = require('esbuild')
-const { NODE_ENV = 'production' } = process.env
-
-const isProduction = NODE_ENV === 'production'
+const isProduction = process.env.ELEVENTY_ENV === "prod"
 
 module.exports = class {
   data() {
