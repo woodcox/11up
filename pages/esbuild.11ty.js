@@ -1,5 +1,5 @@
 const esbuild = require('esbuild')
-const glob = require('glob-all')
+const glob = require('glob-all') // to enable * glob pattern in esbuild
 const isProd = process.env.ELEVENTY_ENV === 'prod' ? true : false
 
 module.exports = class {
