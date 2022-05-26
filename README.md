@@ -3,7 +3,7 @@
 
 # [11up](https://woodcock3.github.io/11up/)
 
-11up is a starter repo to test out how I could build websites fast using [Eleventy](https://www.11ty.dev), [Tailwind CSS](https://tailwindcss.com), and [Alpinejs](https://alpinejs.dev). [ESbuild](https://esbuild.github.io/) is also used as a JS build pipeline. I might make use of the css plugins for ESbuild in the future as this repo by [arslanakram](https://github.com/arslanakram/custom-esbuild-with-scss-purgecss-and-liveserver) has an interesting setup.
+11up is a starter repo to test out how I could build websites fast using [Eleventy](https://www.11ty.dev), [Tailwind CSS](https://tailwindcss.com), and [Alpinejs](https://alpinejs.dev). [ESbuild](https://esbuild.github.io/) is also used as a JS build pipeline. I might make use of the css plugins for ESbuild in the future as this repo by [arslanakram](https://github.com/arslanakram/custom-esbuild-with-scss-purgecss-and-liveserver) has an interesting setup. Details of this set up are also available on [stackoverflow](https://stackoverflow.com/questions/70325815/how-to-setup-custom-esbuild-with-scss-purgecss-liveserver)
 
 I am hoping I can transfer my jekyll projects to the TEAstack + ESbuild. 
 
