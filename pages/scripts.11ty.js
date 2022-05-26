@@ -1,4 +1,5 @@
 const esbuild = require('esbuild')
+const glob = require('glob-all')
 const isProd = process.env.ELEVENTY_ENV === 'prod' ? true : false
 
 module.exports = class {
@@ -11,7 +12,7 @@ module.exports = class {
 
   async render() {
     await esbuild.build({
-      entryPoints: ['assets/js/*.js'],
+      entryPoints: glob.sync(['assets/js/*.js']),
       bundle: true,
       minify: isProd,
       outdir: './dist/assets/js/esb.js',
