@@ -1,5 +1,5 @@
 const esbuild = require('esbuild')
-const isProduction = process.env.ELEVENTY_ENV === "prod"
+const isProd = process.env.ELEVENTY_ENV === 'prod'
 
 module.exports = class {
   data() {
@@ -13,10 +13,10 @@ module.exports = class {
     await esbuild.build({
       entryPoints: ['./assets/js'],
       bundle: true,
-      minify: isProduction,
+      minify: isProd,
       outdir: './dist/assets/js',
-      sourcemap: !isProduction,
-      target: isProduction ? 'es6' : 'esnext'
+      sourcemap: !isProd,
+      target: isProd ? 'es6' : 'esnext'
     })
   }
 }
