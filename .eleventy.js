@@ -67,8 +67,8 @@ module.exports = function (eleventyConfig) {
   })
 
 
-  // Let Eleventy transform HTML files as nunjucks
-  // So that we can use .html instead of .njk
+  // Let Eleventy transform HTML files as liquidjs
+  // So that we can use .html instead of .liquid
 
   return {
     markdownTemplateEngine: 'liquid',
