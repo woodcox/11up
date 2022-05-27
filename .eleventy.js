@@ -71,10 +71,10 @@ module.exports = function (eleventyConfig) {
   // So that we can use .html instead of .njk
 
   return {
-    markdownTemplateEngine: 'njk',
-    templateFormats: ['html', 'njk', 'md', '11ty.js'],
-    dataTemplateEngine: 'njk',
-    htmlTemplateEngine: 'njk',
+    markdownTemplateEngine: 'liquid',
+    templateFormats: ['html', 'liquid', 'md', '11ty.js'],
+    dataTemplateEngine: 'liquid',
+    htmlTemplateEngine: 'liquid',
     dir: {
       input: 'pages',
       output: 'dist',
