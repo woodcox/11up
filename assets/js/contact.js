@@ -14,7 +14,7 @@ const a_ = "@";
 const d_ = ".";
 
 function contact1(name, dom, tl, params){
-  const s = e(name,dom,tl);
+  let s = e(name,dom,tl);
   document.write('<a href="'+m_+s+params+'">'+s+'</a>');
 }
 function contact2(name, dom, tl, params, display){
@@ -25,7 +25,7 @@ function contact3(name, dom, tl, params, display){
 }
 
 function e(name, dom, tl){
-  const s = name+a_;
+  let s = name+a_;
   if (tl!=-2){
     s+= dom;
     if (tl>=0)
@@ -36,7 +36,7 @@ function e(name, dom, tl){
   return s;
 }
 function swapper(d){
-  const s = "";
+  let s = "";
   for (const i=0; i<d.length; i+=2)
     if (i+1==d.length)
       s+= d.charAt(i)
