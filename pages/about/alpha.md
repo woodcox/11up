@@ -1,6 +1,5 @@
 ---
 title: alpha
-permalink: about/
 ---
 
 # {{ title }}
