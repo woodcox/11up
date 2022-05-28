@@ -2,9 +2,9 @@
   "scripts": {
     "dev:eleventy": "ELEVENTY_ENV=dev npx @11ty/eleventy --serve",
     "dev:tailwind": "npx tailwindcss -i assets/css/tailwind.css -c assets/css/tailwind.config.js -o ./_tmp/style.css --watch",
-    "build:eleventy": "ELEVENTY_ENV=dev npx @11ty/eleventy",
+    "build:eleventy": "ELEVENTY_ENV=dev npx @11ty/eleventy --pathprefix=11up",
     "build:tailwind": "npx tailwindcss -i assets/css/tailwind.css -c assets/css/tailwind.config.js -o ./_tmp/style.css",
-    "minify:eleventy": "ELEVENTY_ENV=prod npx @11ty/eleventy",
+    "minify:eleventy": "ELEVENTY_ENV=prod npx @11ty/eleventy --pathprefix=11up",
     "minify:tailwind": "npx tailwindcss -i assets/css/tailwind.css -c assets/css/tailwind.config.js -o ./_tmp/style.css --minify",
     "build": "NODE_ENV=dev npm-run-all build:tailwind build:eleventy",
     "minify": "NODE_ENV=production npm-run-all minify:tailwind minify:eleventy",
