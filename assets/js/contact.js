@@ -37,7 +37,7 @@ function e(name, dom, tl){
 }
 function swapper(d){
   let s = "";
-  for (const i=0; i<d.length; i+=2)
+  for (let i=0; i<d.length; i+=2)
     if (i+1==d.length)
       s+= d.charAt(i)
     else
