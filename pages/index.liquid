@@ -11,5 +11,9 @@
   {%- for post in collections.about -%}
   <li>{{ post.data.title }}</li>
   <li>{{ post.templateContent }}</li>
+  <li>{{ post.url }}</li>
+  <li>{{ post.date }}</li>
+  <li>{{ post.fileSlug }}</li>
+  <li>{{ post.outputPath }}</li>
   {%- endfor -%}
 </ul>
