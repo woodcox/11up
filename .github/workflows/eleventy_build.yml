@@ -24,7 +24,7 @@ jobs:
         if: env.UPDATE_NPM != 'true'
         run: |
           npm install
-          npm run minify
+          npm run build
       - name: Deploy
         if: env.UPDATE_NPM != 'true'
         uses: peaceiris/actions-gh-pages@v3
