@@ -1,4 +1,5 @@
 {
   "templateEngine": "liquid, md",
-  "tag": "about"
+  "tag": "about",
+  "permalink": false  
 }
