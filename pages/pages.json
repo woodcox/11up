@@ -1,5 +1,5 @@
 {
-  "layout": "base",
+  "layout": "pages/_includes/layouts/base.html",
   "description": "default description for project",
   "title": "Default Project Title"
 }
