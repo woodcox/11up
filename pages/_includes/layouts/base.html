@@ -1,15 +1,6 @@
 {% render "partials/head.html" %}
-    {% render "partials/navbar.html" %}
+{% render "partials/navbar.html" %}
     
-    {{ content }}
+{{ content }}
 
-    {% render "partials/footer.html" %}
-
-    {% if path == "home" %}
-      <!-- Netlify Identity Widget -->
-      <!-- Needed only if you are using Netlify Identity feature -->
-      <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    {% endif %}
-
-  </body>
-</html>
+{% render "partials/footer.html" %}
