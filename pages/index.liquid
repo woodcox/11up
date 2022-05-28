@@ -8,9 +8,9 @@
   </div>
   
 <ul>
-  {%- for post in collections.about -%}
-  <li>{{ post.data.title }}</li>
-  <li>{{ post.templateContent }}</li>
-  <li>{{ post.data.tags }}</li>
+  {%- for section in collections.about -%}
+  <li>{{ section.data.title }}</li>
+  <li>{{ section.templateContent }}</li>
+  <li>{{ section.data.tags }}</li>
   {%- endfor %}
 </ul>
