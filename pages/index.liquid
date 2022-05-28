@@ -6,3 +6,10 @@
       <span x-data="{message:'🤖 Hello World 🤓'}" x-text="message"></span>
     </div>
   </div>
+  
+<ul>
+  {%- for post in collections.about -%}
+  <li>{{ post.data.title }}</li>
+  <li>{{ post.data.content }}
+  {%- endfor -%}
+</ul>
