@@ -1,9 +1,9 @@
 
-{% extends "pages/_includes/default.html" %}
+---
+layout: pages/_includes/default.html
+title: It does work
+---
 
-{% block title %}It does work{% endblock %}
-
-{% block content %}
   <div class="fixed inset-0 flex justify-center items-center">
     <div>
       <span class="text-change">Good design</span><br/>
@@ -11,4 +11,3 @@
       <span x-data="{message:'🤖 Hello World 🤓'}" x-text="message"></span>
     </div>
   </div>
-{% endblock %}
