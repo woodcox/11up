@@ -1,1 +1,14 @@
-(()=>{var t=new Array;t[0]="com";t[1]="org";t[2]="net";t[3]="ws";t[4]="info";t[10]="co.uk";t[11]="org.uk";t[12]="gov.uk";t[13]="ac.uk";})();
+(() => {
+  // assets/js/contact.js
+  var tld_ = new Array();
+  tld_[0] = "com";
+  tld_[1] = "org";
+  tld_[2] = "net";
+  tld_[3] = "ws";
+  tld_[4] = "info";
+  tld_[10] = "co.uk";
+  tld_[11] = "org.uk";
+  tld_[12] = "gov.uk";
+  tld_[13] = "ac.uk";
+})();
+//# sourceMappingURL=contact.js.map
