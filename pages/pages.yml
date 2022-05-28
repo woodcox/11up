@@ -1,3 +1,4 @@
+---
 layout: "layouts/base.html"
 title: "11up to no good"
 description: "A starter template for 11ty with Alpine JS, Tailwind and ESbuild"
