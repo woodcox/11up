@@ -9,7 +9,7 @@
   
 <ul>
   {%- for post in collections.about -%}
-  <li>{{ post.title }}</li>
-  <li>{{ post.content }}
+  <li>{{ post.data.title }}</li>
+  <li>{{ post.data.content }}</li>
   {%- endfor -%}
 </ul>
