@@ -22,11 +22,11 @@
     <script defer src="{{ '/assets/js/alpine.js?v=' | url }}{% version %}"></script>
   </head>
   <body>
-    {% include "partials/navbar.html" %}
+    {% render "partials/navbar.html" %}
     
     {{ content }}
 
-    {% include "partials/footer.html" %}
+    {% render "partials/footer.html" %}
 
     {% if path == "home" %}
       <!-- Netlify Identity Widget -->
