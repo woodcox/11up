@@ -4,9 +4,7 @@ layout: base.html
 
 {%- assign type = page.collection_type %}
 {%- assign webpage = site.documents | where: "collection_type", type %}
-<main class="content" id="main-content">
-{%- include templates/page-hero.html %}
-{%- include templates/secondary-nav.html %}
+
   {%- for page in webpage %}{%- capture id %}{{- page.id | remove:'/' | downcase }}{%- endcapture %}
   <section id="{{id}}" class="content-section {{ page.bg-color }}">
     <article>
@@ -19,4 +17,3 @@ layout: base.html
     </article>
   </section>
   {%- endfor %}
-</main>
