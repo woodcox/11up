@@ -1,4 +1,6 @@
 ---
+title: hints
+permalink: hints/
 ---
 
 - liquid url filter = pathPrefix
