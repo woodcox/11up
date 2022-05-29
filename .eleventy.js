@@ -15,17 +15,17 @@ module.exports = function (eleventyConfig) {
 
   // Copy Static Files to /_Site
   eleventyConfig.addPassthroughCopy({
-    "./pages/admin/config.yml": "./admin/config.yml",
+    "./src/admin/config.yml": "./admin/config.yml",
     "./assets/js/site.js": "./assets/js/site.js",
     "./node_modules/alpinejs/dist/cdn.min.js": './assets/js/alpine.js',
     "./node_modules/hyperscript.org/dist/_hyperscript_w9y.min.js": './assets/js/hyperscript.js',
   });
 
   // Copy Image Folder to /_site
-  eleventyConfig.addPassthroughCopy("./pages/assets/image");
+  eleventyConfig.addPassthroughCopy("./src/assets/image");
 
   // Copy favicon to route of /_site
-  eleventyConfig.addPassthroughCopy("./pages/favicon.ico");
+  eleventyConfig.addPassthroughCopy("./src/favicon.ico");
 
   // Watch the tailwind css files
   eleventyConfig.addWatchTarget('./assets/css/tailwind.config.js');
@@ -76,7 +76,7 @@ module.exports = function (eleventyConfig) {
     dataTemplateEngine: 'liquid',
     htmlTemplateEngine: 'liquid',
     dir: {
-      input: 'pages',
+      input: 'src',
       output: 'dist',
     },
   };
