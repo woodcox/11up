@@ -12,7 +12,7 @@
   <li>{{ section.data.title }}</li>
   <li>{{ section.templateContent }}</li>
   <li>{{ section.data.tags }}</li>
-  <li>{{ section.inputPath | split [2] }}</li>
+  <li>{{ section.inputPath | split: "/" }}</li>
   {%- endfor %}
   <li>{{ collections.all }}</li>
 </ul>
