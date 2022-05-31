@@ -1,4 +1,8 @@
 
+  ---
+  colection_type: "right stuff"
+  ---
+  
   <div class="justify-center items-center">
     <div>
       <span class="text-change">Good design</span><br/>
@@ -21,4 +25,5 @@
   <li>{{ previous.last }}</li>
   {%- endfor %}
   <li>{{ collections.all.tags }}</li>
+  <li>{{ page.collection_type }}</li>
 </ul>
