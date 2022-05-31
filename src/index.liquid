@@ -18,7 +18,7 @@
   {%- assign current_page = crumbs.last %}
   {%- assign previous = crumbs | remove: current_page %}
   <li>{{ current_page }}</li>
-  <li>{{ previous.last}}</li>
+  <li>{{ previous.last }}</li>
   {%- endfor %}
   <li>{{ collections.all }}</li>
 </ul>
