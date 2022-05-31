@@ -4,7 +4,7 @@ layout: layouts/base.html
 
 collections.about.data.tags = about
 collections.about.templateContent = content
-collections.all
+{% assign webpage = collections.all.tags | where: collection_type, type %}
 
 {%- assign type = page.collection_type %}
 {%- assign webpage = site.documents | where: "collection_type", type %}
