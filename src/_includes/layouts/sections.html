@@ -2,14 +2,13 @@
 layout: layouts/base.html
 ---
 
-collections.about.data.tags = about
-collections.about.templateContent = content
-{% assign webpage = collections.all.tags | where: collection_type, type %}
 
 {%- assign type = page.collection_type %}
-{%- assign webpage = site.documents | where: "collection_type", type %}
+{% assign sections = collections.all.tags | where: collection_type, type %}
 
-  {%- for page in webpage %}{%- capture id %}{{- page.id | remove:'/' | downcase }}{%- endcapture %}
+{%- assign crumbs = sections.inputPath | split: '/' %}
+{%- assign id = crumbs.last %}
+  {%- for page in sections %}
   <section id="{{id}}" class="content-section {{ page.bg-color }}">
     <article>
       <div class="{{ page.container-size }}{%- if page.container-size == "small" or page.container-size == "medium" %}-{%- endif %}container {{ page.style }}">
