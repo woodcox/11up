@@ -16,8 +16,9 @@
 
   {%- assign crumbs = section.inputPath | split: '/' %}
   {%- assign current_page = crumbs.last %}
-  {%- assign previous = page.url | remove: current_page %}
+  {%- assign previous = crumbs | remove: current_page %}
   <li>{{ crumbs.last }}</li>
+  <li>{{ previous.last}}</li>
   {%- endfor %}
   <li>{{ collections.all }}</li>
 </ul>
