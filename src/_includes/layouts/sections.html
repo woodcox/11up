@@ -4,7 +4,7 @@ layout: layouts/base.html
 
 
 {%- assign type = collection_type %}
-{% assign sections = collections.all.tags | where: collection_type, type %}
+{% assign sections = collections.all.tags | where: "collection_type", type %}
 
 {%- assign crumbs = sections.inputPath | split: '/' %}
 {%- assign id = crumbs.last %}
