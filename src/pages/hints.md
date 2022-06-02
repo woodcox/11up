@@ -1,6 +1,7 @@
 ---
 title: hints
 permalink: hints/
+tags: hint
 ---
 
 - liquid url filter = pathPrefix
