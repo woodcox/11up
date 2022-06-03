@@ -1,7 +1,7 @@
 _site/
 _tmp/
 .DS_Store
-node_modules/
+# node_modules/
 .env
 
 # Local Netlify folder
