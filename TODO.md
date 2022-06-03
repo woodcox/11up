@@ -1,3 +1,3 @@
 - [x] Consider restructuring site like - [on dev.to](https://dev.to/ngblaylock/how-i-set-up-a-project-with-eleventy-31gc)
-- [ ] Use [feather icons](https://feathericons.com/)
+- [ ] Use [lucide icons](https://lucide.dev/) which is a fork of feather icons
 - [ ] Use [Utteran.es](https://github.com/utterance/utterances) for comments
