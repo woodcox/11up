@@ -2,6 +2,17 @@ const svgstore = require('svgstore');
 const fs = require('fs');
 const path = require('path');
 
+// Recommended way, to include only the icons you need.
+import { createIcons, Menu, ArrowRight, Globe } from 'lucide';
+
+createIcons({
+  icons: {
+    Menu,
+    ArrowRight,
+    Globe,
+  },
+});
+
 // Where are Feather icons available from the npm package?
 const ICONS_FOLDER = 'node_modules/feather-icons/dist/icons/';
 
