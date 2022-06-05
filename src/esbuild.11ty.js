@@ -21,7 +21,10 @@ module.exports = class {
       target: isProd ? 'es6' : 'esnext',
       plugins: [
         compress({ 
-          outputDir: './dist/assets/js/compressed'
+          outputDir: 'compressed',
+          gzip: true,
+          brotli: true,
+          removeOrigin: false
         })
       ]
     })
