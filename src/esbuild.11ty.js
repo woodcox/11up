@@ -19,7 +19,7 @@ module.exports = class {
       outdir: './dist/assets/js',
       sourcemap: !isProd,
       target: isProd ? 'es6' : 'esnext',
-      plugins: []
-    }).catch(() => process.exit(1))
+      plugins: ['compress']
+    })
   }
 }
