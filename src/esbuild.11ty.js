@@ -27,6 +27,6 @@ module.exports = class {
           removeOrigin: false
         })
       ],
-    })
+    }).catch(() => process.exit(1))
   }
 }
