@@ -24,9 +24,9 @@ module.exports = class {
           outputDir: 'compressed',
           gzip: true,
           brotli: true,
-          removeOrigin: false,
+          removeOrigin: false
         })
-      ]
+      ],
     })
   }
 }
