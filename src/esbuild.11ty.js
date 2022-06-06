@@ -20,7 +20,7 @@ module.exports = class {
       sourcemap: !isProd,
       target: isProd ? 'es6' : 'esnext',
       plugins: [
-        compress({ 
+        compress.sync({ 
           outputDir: 'compressed',
           gzip: true,
           brotli: true,
