@@ -81,4 +81,8 @@ module.exports = function (eleventyConfig) {
       output: 'dist',
     },
   };
+  // Compress gzip or brotli
+  eleventyConfig.addPlugin(compress, {
+    /* Optional options. */
+  });
 };
