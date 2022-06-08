@@ -1,4 +1,4 @@
-const lucide = require('lucide-icons');
+const lucide = require('lucide');
 
 module.exports = (eleventyConfig, attributes = {}) => {
 
