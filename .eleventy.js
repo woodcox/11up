@@ -1,7 +1,6 @@
 const yaml = require("js-yaml");
 const htmlmin = require('html-minifier');
 const now = String(Date.now());
-const compress = require('eleventy-plugin-compress');
 
 module.exports = function (eleventyConfig) {
   // Disable automatic use of your .gitignore
@@ -67,11 +66,6 @@ module.exports = function (eleventyConfig) {
     return content
   })
   
-  // Compress gzip or brotli
-  eleventyConfig.addPlugin(compress, {
-    /* Optional options. */
-  });
-
   // Let Eleventy transform HTML files as liquidjs
   // So that we can use .html instead of .liquid
   // 11ty.js template format also picks up on the esbuild.11ty.js script
