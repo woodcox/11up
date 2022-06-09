@@ -1,6 +1,7 @@
 const yaml = require("js-yaml");
 const htmlmin = require('html-minifier');
 const now = String(Date.now());
+const lucideicons = require(".lucide-svg-icons.js");
 
 module.exports = function (eleventyConfig) {
   // Disable automatic use of your .gitignore
@@ -41,6 +42,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode('version', function () {
     return now
   });
+
+  // Insert Lucide SVG with {% %}
+  eleventyConfig.addPlugin(lucideicons, {});
 
   // Change things based on the envirnoment
   let env = process.env.ELEVENTY_ENV;
