@@ -1,7 +1,7 @@
 const yaml = require("js-yaml");
 const htmlmin = require('html-minifier');
 const now = String(Date.now());
-const lucideicons = require(".lucide-svg-icons.js");
+const lucideicons = require(".lucide-svg-config.js");
 
 module.exports = function (eleventyConfig) {
   // Disable automatic use of your .gitignore
