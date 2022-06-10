@@ -17,7 +17,7 @@ module.exports = (eleventyConfig, attributes = {}) => {
 
     const globalAttributes = { ...defaultAttributes, ...attributes };
 
-    eleventyConfig.addShortcode("lucide", (iconName, attributes = {}) => {
+    eleventyConfig.addLiquidShortcode("lucide", (iconName, attributes = {}) => {
         if (!iconName) {
             throw new Error(
                 "[eleventy-lucideicons] the iconName must be specified"
