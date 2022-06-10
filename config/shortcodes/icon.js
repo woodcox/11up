@@ -1,4 +1,4 @@
-const lucide = require('lucide');
+const lucide = require('.assets/images/svg');
 
 const iconShortcode = (props) => {
   const {
