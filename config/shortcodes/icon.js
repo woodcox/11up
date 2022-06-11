@@ -1,8 +1,9 @@
-const glob = require('glob-all') // to enable * glob pattern
-const svgfiles = glob.sync(['../../assets/images/svg/*.svg']);
-const lucide = require('../../assets/images/svg/');
+const fs = require('fs');
 
 const iconShortcode = (props) => {
+  let relativeFilePath = `./assets/images/svg/${file}.svg`;
+  let svgdata = fs.readFileSync(relativeFilePath,
+
   const {
     icon,
     className,
@@ -15,7 +16,7 @@ const iconShortcode = (props) => {
     strokeLinejoin = 'round',
   } = props ?? {};
   try {
-    return lucide.icons[icon].toSvg({
+    return svgdata.icons[icon].toSvg({
       class: className,
       width,
       height,
