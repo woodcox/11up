@@ -8,6 +8,17 @@ fs.readdirSync(path.resolve('./assets/images/svg/')).forEach(file => {
   listFiles.push(path.resolve('./assets/images/svg/', file))
 });
 
+let getSvgContent = function (file) {
+  let relativeFilePath = `./src/svg/${file}.svg`;
+  let data = fs.readFileSync(relativeFilePath, 
+  function(err, contents) {
+    if (err) return err
+    return contents
+  });
+
+  return data.toString('utf8');
+};
+
 const iconShortcode = (props) => {
 
   const {
