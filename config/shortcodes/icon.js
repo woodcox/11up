@@ -1,4 +1,12 @@
 const fs = require('fs');
+const path = require('path');
+
+let listFiles = []
+fs.readdirSync(path.resolve(__dirname, './assets/images/svg/')).forEach(file => {
+  if (file.split('.').pop() !== 'svg')
+    return;
+  listFiles.push(path.resolve(__dirname, '.assets/images/svg/', file)
+});
 
 const iconShortcode = (props) => {
 
@@ -12,7 +20,7 @@ const iconShortcode = (props) => {
     strokeWidth = 2,
     strokeLinecap = 'round',
     strokeLinejoin = 'round',
-    relativeFilePath = `./assets/images/svg/`+ icon +`.svg`,
+    relativeFilePath = `./assets/images/svg/$(listFiles).svg`,
   } = props ?? {};
   try {
     let svgdata = fs.readFileSync(relativeFilePath);
