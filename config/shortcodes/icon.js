@@ -1,9 +1,6 @@
 const fs = require('fs');
 
 const iconShortcode = (props) => {
-  let relativeFilePath = `./assets/images/svg/${icon}.svg`;
-  let svgdata = fs.readFileSync(relativeFilePath);
-
 
   const {
     icon,
@@ -15,6 +12,8 @@ const iconShortcode = (props) => {
     strokeWidth = 2,
     strokeLinecap = 'round',
     strokeLinejoin = 'round',
+    relativeFilePath = `./assets/images/svg/${icon}.svg`;
+    svgdata = fs.readFileSync(relativeFilePath);
   } = props ?? {};
   try {
     return svgdata.icons[icon].toSvg({
