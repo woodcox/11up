@@ -1,6 +1,6 @@
 const glob = require('glob-all') // to enable * glob pattern
 const svgfiles = glob.sync(['../../assets/images/svg/*.svg']);
-const lucide = require('svgfiles');
+const lucide = require('../../assets/images/svg');
 
 const iconShortcode = (props) => {
   const {
