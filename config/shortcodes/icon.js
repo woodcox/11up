@@ -8,7 +8,7 @@ fs.readdirSync(path.resolve('./assets/images/svg/')).forEach(file => {
   listFiles.push(path.resolve('./assets/images/svg/', file))
 });
 
-let getSvgContent = function (file) {
+const getSvgContent = function (file) {
   let relativeFilePath = `./src/svg/${file}.svg`,
   function(err, contents) {
     if (err) return err
@@ -30,6 +30,7 @@ const iconShortcode = (props) => {
     strokeWidth = 2,
     strokeLinecap = 'round',
     strokeLinejoin = 'round',
+    relativeFilePath = getSvgContent,
   } = props ?? {};
   try {
     let svgdata = fs.readFileSync(relativeFilePath);
