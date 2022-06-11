@@ -1,8 +1,9 @@
 const fs = require('fs');
 
 const iconShortcode = (props) => {
-  let relativeFilePath = `./11up/assets/images/svg/${file}.svg`;
+  let relativeFilePath = `./assets/images/svg/${icon}.svg`;
   let svgdata = fs.readFileSync(relativeFilePath);
+
 
   const {
     icon,
