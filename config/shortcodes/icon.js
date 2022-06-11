@@ -15,7 +15,7 @@ const iconShortcode = (props) => {
     relativeFilePath = `./assets/images/svg/${file}.svg`,
   } = props ?? {};
   try {
-    function (file) {
+    let route = function (file) {
       let svgdata = fs.readFileSync(relativeFilePath);
       return svgdata.icons[icon].toSvg({
         class: className,
