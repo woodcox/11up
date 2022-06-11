@@ -2,10 +2,10 @@ const fs = require('fs');
 const path = require('path');
 
 let listFiles = []
-fs.readdirSync(path.resolve(__dirname, './assets/images/svg/')).forEach(file => {
+fs.readdirSync(path.resolve('./assets/images/svg/')).forEach(file => {
   if (file.split('.').pop() !== 'svg')
     return;
-  listFiles.push(path.resolve(__dirname, '.assets/images/svg/', file))
+  listFiles.push(path.resolve('.assets/images/svg/', file))
 });
 
 const iconShortcode = (props) => {
