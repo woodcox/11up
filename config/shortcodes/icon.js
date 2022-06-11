@@ -12,6 +12,8 @@ const getSvgContent = function (file) {
   let relativeFilePath = `./src/svg/${file}.svg`
 };
 
+const svgFile = getSvgContent.toString('utf8');
+
 const iconShortcode = (props) => {
 
   const {
@@ -24,7 +26,7 @@ const iconShortcode = (props) => {
     strokeWidth = 2,
     strokeLinecap = 'round',
     strokeLinejoin = 'round',
-    relativeFilePath = getSvgContent,
+    relativeFilePath = svgFile,
   } = props ?? {};
   try {
     let svgdata = fs.readFileSync(relativeFilePath);
