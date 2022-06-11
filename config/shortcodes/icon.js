@@ -16,7 +16,7 @@ const iconShortcode = (props) => {
   } = props ?? {};
   try {
     let svgdata = fs.readFileSync(relativeFilePath);
-    let icon = $(file);
+    let icon = console.log(file);
     return svgdata.icons[icon].toSvg({
       class: className,
       width,
