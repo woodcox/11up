@@ -12,10 +12,10 @@ const iconShortcode = (props) => {
     strokeWidth = 2,
     strokeLinecap = 'round',
     strokeLinejoin = 'round',
+    _svgname = icon,
     relativeFilePath = `./assets/images/svg/`+_svgname+`.svg`,
   } = props ?? {};
   try {
-    let _svgname = icon;
     let svgdata = fs.readFileSync(relativeFilePath);
     return svgdata.icons[icon].toSvg({
       class: className,
