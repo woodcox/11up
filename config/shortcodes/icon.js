@@ -15,19 +15,18 @@ const iconShortcode = (props) => {
     relativeFilePath = `./assets/images/svg/${file}.svg`,
   } = props ?? {};
   try {
-    let route = function (file) {
-      let svgdata = fs.readFileSync(relativeFilePath);
-      return svgdata.icons[icon].toSvg({
-        class: className,
-        width,
-        height,
-        stroke,
-        fill,
-        'stroke-width': strokeWidth,
-        'stroke-linecap': strokeLinecap,
-        'stroke-linejoin': strokeLinejoin,
-      });
-    }
+    let svgdata = fs.readFileSync(relativeFilePath);
+    let icon = $(file);
+    return svgdata.icons[icon].toSvg({
+      class: className,
+      width,
+      height,
+      stroke,
+      fill,
+      'stroke-width': strokeWidth,
+      'stroke-linecap': strokeLinecap,
+      'stroke-linejoin': strokeLinejoin,
+    });
   } catch (e) {
     console.error(e);
   }
