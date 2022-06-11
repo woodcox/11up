@@ -20,7 +20,7 @@ const iconShortcode = (props) => {
     strokeWidth = 2,
     strokeLinecap = 'round',
     strokeLinejoin = 'round',
-    relativeFilePath = listFiles + ".svg"
+    relativeFilePath = listFiles
   } = props ?? {};
   try {
     let svgdata = fs.readFileSync(relativeFilePath);
