@@ -12,20 +12,22 @@ const iconShortcode = (props) => {
     strokeWidth = 2,
     strokeLinecap = 'round',
     strokeLinejoin = 'round',
-    relativeFilePath = `./assets/images/svg/${icon}.svg`,
+    relativeFilePath = `./assets/images/svg/${file}.svg`,
   } = props ?? {};
   try {
-    let svgdata = fs.readFileSync(relativeFilePath);
-    return svgdata.icons[icon].toSvg({
-      class: className,
-      width,
-      height,
-      stroke,
-      fill,
-      'stroke-width': strokeWidth,
-      'stroke-linecap': strokeLinecap,
-      'stroke-linejoin': strokeLinejoin,
-    });
+    function (file) {
+      let svgdata = fs.readFileSync(relativeFilePath);
+      return svgdata.icons[icon].toSvg({
+        class: className,
+        width,
+        height,
+        stroke,
+        fill,
+        'stroke-width': strokeWidth,
+        'stroke-linecap': strokeLinecap,
+        'stroke-linejoin': strokeLinejoin,
+      });
+    }
   } catch (e) {
     console.error(e);
   }
