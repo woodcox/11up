@@ -5,7 +5,7 @@ let listFiles = []
 fs.readdirSync(path.resolve('./assets/images/svg/')).forEach(file => {
   if (file.split('.').pop() !== 'svg')
     return;
-  listFiles.push(path.resolve('.assets/images/svg/', file))
+  listFiles.push(path.resolve('./assets/images/svg/', file))
 });
 
 const iconShortcode = (props) => {
