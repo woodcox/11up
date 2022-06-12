@@ -14,7 +14,7 @@ const getSvgContent = function (file) {
   let relativeFilePath = './assets/images/svg/'
 };
 
-const svgFile = path.resolve('./assets/images/svg/');
+const svgFile = fs.readdirSync(path.resolve('./assets/images/svg/'));
 
 const iconShortcode = (props) => {
 
