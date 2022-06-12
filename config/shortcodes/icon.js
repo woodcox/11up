@@ -8,10 +8,10 @@ fs.readdirSync(path.resolve('./assets/images/svg/')).forEach(file => {
   listFiles.push(path.resolve('./assets/images/svg/', file))
 });
 
-if listFiles === 
+
 
 const getSvgContent = function (file) {
-  let relativeFilePath = `./src/svg/${file}.svg`
+  let relativeFilePath = `./assets/images/svg/${file}.svg`
 };
 
 const svgFile = getSvgContent.toString('utf8');
