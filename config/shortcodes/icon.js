@@ -39,7 +39,7 @@ const iconShortcode = (props) => {
           return contents
         });                             
                                                                     
-        return svgData.toSvg('utf8');
+        return svgData.toString('utf8');
       }
     }
   } catch (e) {
