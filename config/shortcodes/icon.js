@@ -17,15 +17,14 @@ const getSvgContent = function (file) {
 const svgFile = fs.readdirSync(path.resolve('./assets/images/svg/'));
 
 let iconShortcode = function (file) {
-    let svgFilePath = '.assests/images/svg/${file}.svg';
-    let svgData = fs.readFileSync(svgFilePath,
-    function(err, contents) {
-      if (err) return err
-      return contents
-    });                             
+  let svgFilePath = '.assests/images/svg/${file}.svg';
+  let svgData = fs.readFileSync(svgFilePath,
+  function(err, contents) {
+    if (err) return err
+    return contents
+  });                             
                                                                     
-    return svgData.toString('utf8');
-  }
+  return svgData.toString('utf8');
 };
 
 module.exports = iconShortcode;
