@@ -28,22 +28,30 @@ const iconShortcode = (props) => {
     strokeWidth = 2,
     strokeLinecap = 'round',
     strokeLinejoin = 'round',
-    relativeFilePath = svgFile + icon + '.svg',
   } = props ?? {};
   try {
-    let svgdata = fs.readFileSync(relativeFilePath);
-    return svgdata.icons[icon].toSvg({
-      class: className,
-      width,
-      height,
-      stroke,
-      fill,
-      'stroke-width': strokeWidth,
-      'stroke-linecap': strokeLinecap,
-      'stroke-linejoin': strokeLinejoin,
-    });
-  } catch (e) {
-    console.error(e);
+    function eleventyConfig(config) {
+      let getSvgContent = function (file) {
+        let svgFilePath = '.assests/images/svg/${file}.svg';
+        let svgData = fs.readFileSync(svgFilePath,
+        function(err, contents) {
+          if (err) return err
+          return contents
+        });                             
+                                                                    
+        return svgData.toSvg({
+         class: className,
+         width,
+         height,
+         stroke,
+         fill,
+        'stroke-width': strokeWidth,
+        'stroke-linecap': strokeLinecap,
+        'stroke-linejoin': strokeLinejoin,
+      });
+    } catch (e) {
+      console.error(e);
+    }
   }
 };
 
