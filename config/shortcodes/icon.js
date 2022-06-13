@@ -41,10 +41,10 @@ const iconShortcode = (props) => {
                                                                     
         return svgData.toSvg({
          class: className,
-         width,
-         height,
-         stroke,
-         fill,
+         width: width,
+         height: height,
+         stroke: stroke,
+         fill: fill,
         'stroke-width': strokeWidth,
         'stroke-linecap': strokeLinecap,
         'stroke-linejoin': strokeLinejoin,
