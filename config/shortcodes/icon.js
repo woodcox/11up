@@ -39,16 +39,8 @@ const iconShortcode = (props) => {
           return contents
         });                             
                                                                     
-        return svgData.toSvg({
-         class: className,
-         width: width,
-         height: height,
-         stroke: stroke,
-         fill: fill,
-        'stroke-width': strokeWidth,
-        'stroke-linecap': strokeLinecap,
-        'stroke-linejoin': strokeLinejoin,
-      });
+        return svgData.toSvg('utf8');
+      }
     }
   } catch (e) {
     console.error(e);
