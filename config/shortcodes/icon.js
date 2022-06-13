@@ -16,34 +16,15 @@ const getSvgContent = function (file) {
 
 const svgFile = fs.readdirSync(path.resolve('./assets/images/svg/'));
 
-const iconShortcode = (props) => {
-
-  const {
-    icon,
-    className,
-    width = 24,
-    height = 24,
-    stroke = 'currentColor',
-    fill = 'none',
-    strokeWidth = 2,
-    strokeLinecap = 'round',
-    strokeLinejoin = 'round',
-  } = props ?? {};
-  try {
-    function eleventyConfig(config) {
-      let getSvgContent = function (file) {
-        let svgFilePath = '.assests/images/svg/${file}.svg';
-        let svgData = fs.readFileSync(svgFilePath,
-        function(err, contents) {
-          if (err) return err
-          return contents
-        });                             
+let iconShortcode = function (file) {
+    let svgFilePath = '.assests/images/svg/${file}.svg';
+    let svgData = fs.readFileSync(svgFilePath,
+    function(err, contents) {
+      if (err) return err
+      return contents
+    });                             
                                                                     
-        return svgData.toString('utf8');
-      }
-    }
-  } catch (e) {
-    console.error(e);
+    return svgData.toString('utf8');
   }
 };
 
