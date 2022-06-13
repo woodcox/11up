@@ -49,9 +49,9 @@ const iconShortcode = (props) => {
         'stroke-linecap': strokeLinecap,
         'stroke-linejoin': strokeLinejoin,
       });
-    } catch (e) {
-      console.error(e);
     }
+  } catch (e) {
+    console.error(e);
   }
 };
 
