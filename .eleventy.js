@@ -43,7 +43,7 @@ module.exports = function (eleventyConfig) {
     return now
   });
 
-  // Insert Lucide SVG with {% %}
+  // Insert any .svg file with {% icon "github" %} saved in .assets/images/svg/
   eleventyConfig.addShortcode('icon', iconShortcode);
 
   // Change things based on the envirnoment
