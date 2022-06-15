@@ -1,5 +1,5 @@
 const fs = require('fs');
-// const path = require('path');
+const path = require('path');
 
 // let listFiles = []
 // fs.readdirSync(path.resolve('./assets/images/svg/')).forEach(file => {
@@ -30,7 +30,7 @@ const fs = require('fs');
 
 
 iconShortcode = function(file) {  
-  let relativeFilePath = `.assets/images/svg/${file}.svg`  
+  let relativeFilePath = path.resolve(`.assets/images/svg/${file}.svg`) 
 
   let data = fs.readFileSync(relativeFilePath, function(err, contents) {  
     if (err) return err  
