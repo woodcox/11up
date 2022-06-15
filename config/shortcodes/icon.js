@@ -30,7 +30,7 @@ const fs = require('fs');
 
 
 iconShortcode = function(file) {  
-  let relativeFilePath = `.assests/images/svg/${file}.svg`  
+  let relativeFilePath = `.assets/images/svg/${file}.svg`  
 
   let data = fs.readFileSync(relativeFilePath, function(err, contents) {  
     if (err) return err  
