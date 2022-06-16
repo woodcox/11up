@@ -39,8 +39,8 @@
 
 
 <ul>
-  {% assign collection_type = type %]
-  {%- for section in collections.type -%}
+  {% assign collection_type = types %]
+  {%- for section in collections.types -%}
   <li>{{ section.data.title }}</li>
   <li>{{ section.templateContent }}</li>
   <li>{{ section.data.tags }}</li>
