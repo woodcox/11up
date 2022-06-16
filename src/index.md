@@ -1,6 +1,5 @@
  ---
  collection_type: about
- title: testing
  ---
  
  # {{ title }}
