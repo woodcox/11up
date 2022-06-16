@@ -13,7 +13,7 @@ const iconShortcode = (props) => {
     strokeLinejoin = 'round',
   } = props ?? {};
   try {
-    return feather.icons[icon].toSvg({
+    return feather.icons[${file}].toSvg({
       class: className,
       width,
       height,
