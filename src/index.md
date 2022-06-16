@@ -1,5 +1,6 @@
  ---
  collection_type: about
+ title: testing
  ---
  
  <div class="justify-center items-center">
@@ -35,3 +36,19 @@
   {% capture type %}{{ previous.last }}{% endcapture %}
 <p>{{ collection.inputPath }}</p>
 {%- endfor %}
+
+
+<ul>
+  {% assign collection_type = type %]
+  {%- for section in collections.type -%}
+  <li>{{ section.data.title }}</li>
+  <li>{{ section.templateContent }}</li>
+  <li>{{ section.data.tags }}</li>
+  <li>{{ section.inputPath | split: "/" }}</li>
+
+  {%- assign crumbs = section.inputPath | split: '/' %}
+  {%- assign current_page = crumbs.last %}
+  {%- assign previous = section.inputPath | remove: current_page | split: '/' %}
+  <li>{{ previous.last }}</li>
+  {%- endfor %}
+</ul>
