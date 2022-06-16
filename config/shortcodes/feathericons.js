@@ -2,7 +2,7 @@ const feather = require('feather-icons');
 
 const iconShortcode = (props) => {
   const {
-    icon,
+    feather,
     className,
     width = 24,
     height = 24,
