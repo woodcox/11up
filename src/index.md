@@ -44,7 +44,7 @@
 
 <ul>
   {% assign collection_type = types %]
-  {%- for xsection in collections.all | where: "collection_type", types -%}
+  {%- for xsection in collections.pages -%}
   <li>{{ xsection.data.title }}</li>
   <li>{{ xsection.templateContent }}</li>
   <li>{{ xsection.data.tags }}</li>
