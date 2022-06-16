@@ -3,6 +3,9 @@
  title: testing
  ---
  
+ # {{ title }}
+ 
+ ## {{ collection_type }}
  
  <div class="justify-center items-center">
     <div>
@@ -41,7 +44,7 @@
 
 <ul>
   {% assign collection_type = types %]
-  {%- for xsection in collections.types -%}
+  {%- for xsection in collections.all | where: "collection_type", types -%}
   <li>{{ xsection.data.title }}</li>
   <li>{{ xsection.templateContent }}</li>
   <li>{{ xsection.data.tags }}</li>
