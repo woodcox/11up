@@ -27,7 +27,7 @@
 {% for collection in collections.all %}
 {%- assign crumbs = collection.inputPath | split: '/' %}
   {%- assign current_page = crumbs.last %}
-  {%- assign previous = section.inputPath | remove: current_page | split: '/' %}
-  <li>{{ previous.last }}</li>
+  {%- assign previous = collection.inputPath | remove: current_page | split: '/' %}
+  <p>{{ previous.last }}</p>
 <p>{{ collection.inputPath }}</p>
 {%- endfor %}
