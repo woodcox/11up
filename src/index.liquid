@@ -1,8 +1,4 @@
- ---
- collection_type: about
- ---
- 
- # {{ title }}
+# {{ title }}
  
  ## {{ collection_type }}
  
@@ -43,7 +39,7 @@
 
 <ul>
   {% assign collection_type = types %}
-  {%- for xsection in collections.pages -%}
+  {%- for xsection in collections.types -%}
   <li>{{ xsection.data.title }}</li>
   <li>{{ xsection.templateContent }}</li>
   <li>{{ xsection.data.tags }}</li>
