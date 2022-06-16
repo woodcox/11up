@@ -1,7 +1,8 @@
 const yaml = require("js-yaml");
 const htmlmin = require('html-minifier');
 const now = String(Date.now());
-const iconShortcode = require('./config/shortcodes/svgcontent.js');
+const svgContent = require('./config/shortcodes/svgcontent.js');
+const iconShortcode = require('./config/shortcodes/feathericon.js');
 
 module.exports = function (eleventyConfig) {
   // Disable automatic use of your .gitignore
@@ -45,6 +46,9 @@ module.exports = function (eleventyConfig) {
 
   // Insert any .svg file with {% icon "github" %} saved in .assets/images/svg/
   eleventyConfig.addShortcode('icon', svgContent);
+  
+  // Insert a feather-icon with {% icon "github" %} from https://feathericons.com/
+  eleventyConfig.addShortcode('feather', iconShortcode);
 
   // Change things based on the envirnoment
   let env = process.env.ELEVENTY_ENV;
