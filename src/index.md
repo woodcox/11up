@@ -41,15 +41,15 @@
 
 <ul>
   {% assign collection_type = types %]
-  {%- for section in collections.types -%}
-  <li>{{ section.data.title }}</li>
-  <li>{{ section.templateContent }}</li>
-  <li>{{ section.data.tags }}</li>
-  <li>{{ section.inputPath | split: "/" }}</li>
+  {%- for xsection in collections.types -%}
+  <li>{{ xsection.data.title }}</li>
+  <li>{{ xsection.templateContent }}</li>
+  <li>{{ xsection.data.tags }}</li>
+  <li>{{ xsection.inputPath | split: "/" }}</li>
 
-  {%- assign crumbs = section.inputPath | split: '/' %}
-  {%- assign current_page = crumbs.last %}
-  {%- assign previous = section.inputPath | remove: current_page | split: '/' %}
-  <li>{{ previous.last }}</li>
+  {%- assign xcrumbs = xsection.inputPath | split: '/' %}
+  {%- assign xcurrent_page = xcrumbs.last %}
+  {%- assign xprevious = xsection.inputPath | remove: xcurrent_page | split: '/' %}
+  <li>{{ xprevious.last }}</li>
   {%- endfor %}
 </ul>
