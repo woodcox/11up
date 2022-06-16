@@ -2,7 +2,7 @@ const feather = require('feather-icons');
 
 const iconShortcode = (props) => {
   const {
-    feather,
+    icon,
     className,
     width = 24,
     height = 24,
@@ -13,7 +13,7 @@ const iconShortcode = (props) => {
     strokeLinejoin = 'round',
   } = props ?? {};
   try {
-    return feather.icons[feather].toSvg({
+    return feather.icons[icon].toSvg({
       class: className,
       width,
       height,
