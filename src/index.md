@@ -42,7 +42,7 @@
 
 
 <ul>
-  {% assign collection_type = types %]
+  {% assign collection_type = types %}
   {%- for xsection in collections.pages -%}
   <li>{{ xsection.data.title }}</li>
   <li>{{ xsection.templateContent }}</li>
@@ -53,5 +53,5 @@
   {%- assign xcurrent_page = xcrumbs.last %}
   {%- assign xprevious = xsection.inputPath | remove: xcurrent_page | split: '/' %}
   <li>{{ xprevious.last }}</li>
-  {%- endfor %}
+  {% endfor %}
 </ul>
