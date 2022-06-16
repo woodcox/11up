@@ -45,10 +45,10 @@ module.exports = function (eleventyConfig) {
   });
 
   // Insert any .svg file with {% icon "github" %} saved in .assets/images/svg/
-  eleventyConfig.addShortcode('icon', svgContent);
+  eleventyConfig.addShortcode('svg', svgContent);
   
   // Insert a feather-icon with {% icon "github" %} from https://feathericons.com/
-  eleventyConfig.addShortcode('feather', iconShortcode);
+  eleventyConfig.addShortcode('icon', iconShortcode);
 
   // Change things based on the envirnoment
   let env = process.env.ELEVENTY_ENV;
