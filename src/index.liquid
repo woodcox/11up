@@ -39,7 +39,7 @@
 
 <ul>
   {% assign collection_type = types %}
-  {%- for xsection in collections.all where: "collection_type", type -%}
+  {%- for xsection in collections.all | where: "collection_type", type -%}
   <li>{{ xsection.data.title }}</li>
   <li>{{ xsection.templateContent }}</li>
   <li>{{ xsection.data.tags }}</li>
