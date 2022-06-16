@@ -1,6 +1,5 @@
  ---
  collection_type: about
- templateEngine: "liquid, md"
  ---
  
  <div class="justify-center items-center">
