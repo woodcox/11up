@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-iconShortcode = function(file) {  
+svgContent = function(file) {  
   let absFilePath = path.resolve(`assets/images/svg/${file}.svg`) 
 
   let svgData = fs.readFileSync(absFilePath, function(err, contents) {    
@@ -15,4 +15,4 @@ iconShortcode = function(file) {
 }
 
 
-module.exports = iconShortcode;
+module.exports = svgContent;
