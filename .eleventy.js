@@ -2,7 +2,7 @@ const yaml = require("js-yaml");
 const htmlmin = require('html-minifier');
 const now = String(Date.now());
 const svgContent = require('./config/shortcodes/svgcontent.js');
-const iconShortcode = require('./config/shortcodes/feathericon.js');
+const iconShortcode = require('./config/shortcodes/feathericons.js');
 
 module.exports = function (eleventyConfig) {
   // Disable automatic use of your .gitignore
