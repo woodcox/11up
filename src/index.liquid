@@ -26,4 +26,6 @@
 
 {% svg "facebook" %}
 
-<p>{{ collections.all.data.tags }}</p>
+{% for collection in collections.all.data %}
+<p>{{ collection.tags }]</p>
+{%- endfor %}
