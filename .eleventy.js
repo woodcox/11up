@@ -20,7 +20,7 @@ module.exports = function (eleventyConfig) {
     "./src/admin/config.yml": "./admin/config.yml",
     "./assets/js/site.js": "./assets/js/site.js",
     "./node_modules/alpinejs/dist/cdn.min.js": './assets/js/alpine.js',
-    "./node_modules/htmx/dist/htmx.min.js": './assets/js/htmx.js',
+    "./node_modules/htmx.org/dist/htmx.min.js": './assets/js/htmx.js',
   });
 
   // Copy Image Folder to /_site
