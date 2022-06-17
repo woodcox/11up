@@ -20,7 +20,7 @@ module.exports = function (eleventyConfig) {
     "./src/admin/config.yml": "./admin/config.yml",
     "./assets/js/site.js": "./assets/js/site.js",
     "./node_modules/alpinejs/dist/cdn.min.js": './assets/js/alpine.js',
-    "./node_modules/hyperscript.org/dist/_hyperscript_w9y.min.js": './assets/js/hyperscript.js',
+    "./node_modules/htmx/dist/htmx.min.js": './assets/js/htmx.js',
   });
 
   // Copy Image Folder to /_site
@@ -37,6 +37,11 @@ module.exports = function (eleventyConfig) {
   
   // Watch the js files for esbuild in scripts.11ty.js
   eleventyConfig.addWatchTarget('./assets/js');
+
+  // Sections
+  eleventyConfig.addCollection("sections", function (collectionApi) {
+    return collectionApi.getFilteredByGlob(".src/sections/**/*.md");
+  });
 
   // Shortcodes
   // Add cache busting with {% version %} time string
