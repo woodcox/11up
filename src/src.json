@@ -2,5 +2,6 @@
    "layout": "layouts/base.html",
    "title": "11up to no good",
    "description": "A starter template for 11ty with Alpine JS, Tailwind and ESbuild",
-   "collection_type": "about"
+   "collection_type": "about",
+   "templateEngine": "liquid,md"
  }
