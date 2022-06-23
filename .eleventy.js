@@ -40,7 +40,7 @@ module.exports = function (eleventyConfig) {
 
   // Sections
   eleventyConfig.addCollection("sections", function (collectionApi) {
-    return collectionApi.getFilteredByGlob(".src/sections/**/*.md");
+    return collectionApi.getFilteredByGlob("sections/**/*.md");
   });
 
   // Shortcodes
