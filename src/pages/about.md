@@ -1,7 +1,6 @@
 ---
 title: "about test"
-permalink: about/
+permalink: test/
 heading: 1
-collection_type: about
 layout: layouts/sections.html
 ---
