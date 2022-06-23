@@ -40,15 +40,8 @@
 
 <ul>
   {% assign collection_type = type %}
-  {%- for page in collections.sections -%}
+  {%- for page in collections.sections | where: "collection_type", type -%}
   <li>{{ page.data.title }}</li>
   <li>{{ page.templateContent }}</li>
-  <li>{{ page.data.tags }}</li>
-  <li>{{ page.inputPath | split: "/" }}</li>
-
-  {%- assign crumbs = page.inputPath | split: '/' %}
-  {%- assign current_page = crumbs.last %}
-  {%- assign previous = page.inputPath | remove: current_page | split: '/' %}
-  <li>{{ previous.last }}</li>
   {% endfor %}
 </ul>
