@@ -1,6 +1,5 @@
 ---
 title: Second
-permalink: false
 ---
 
 # {{ title }}
