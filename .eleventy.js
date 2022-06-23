@@ -39,7 +39,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget('./assets/js');
 
   // Sections
-  eleventyConfig.addCollection("sections", function (collectionApi) {
+  eleventyConfig.addCollection("sections", function(collectionApi) {
     return collectionApi.getFilteredByGlob("sections/**/*.md");
   });
 
