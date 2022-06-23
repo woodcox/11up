@@ -1,1 +1,5 @@
-{}
+{
+  "templateEngine": "liquid, md",
+  "tags": "home",
+  "permalink": false  
+}
