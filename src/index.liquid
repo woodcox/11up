@@ -40,7 +40,7 @@
 
 <ul>
   {% assign collection_type = type %}
-  {%- for page in collections.sections | where: "collection_type", type -%}
+  {%- for page in collections.sections | where: "collection_type", tags -%}
   <li>{{ page.data.title }}</li>
   <li>{{ page.templateContent }}</li>
   {% endfor %}
