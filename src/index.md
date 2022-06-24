@@ -42,10 +42,8 @@ templateEngine: liquid,md
 
 {% svg "github" %}
 
-<ul>
-  {% assign collection_type = type %}
-  {%- for page in collections.sections | where: "collection_type", tags -%}
-  <li>{{ page.data.title }}</li>
-  <li>{{ page.templateContent }}</li>
-  {% endfor %}
-</ul>
+
+{% assign collection_type = type %}
+{%- for page in collections.sections | where: "collection_type", tags -%}
+{{ page.templateContent }}
+{% endfor %}
