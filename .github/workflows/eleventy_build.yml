@@ -10,13 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo ${{ env.UPDATE_NPM }}
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         if: env.UPDATE_NPM != 'true'
         with:
           fetch-depth: 1
       - name: Use Node.js 16.x
         if: env.UPDATE_NPM != 'true'
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: '16'
           cache: 'npm'
@@ -43,10 +43,10 @@ jobs:
       - run: echo '${{ env.UPDATE_NPM }}'
       - name: Checkout
         if: env.UPDATE_NPM == 'true'
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Setup Node
         if: env.UPDATE_NPM == 'true'
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: '16'
       # - run: npm init -y
