@@ -43,7 +43,7 @@ templateEngine: liquid,md
 {% svg "github" %}
 
 
-{% assign collection_type = type %}
-{%- for page in collections.sections | where: "collection_type", tags -%}
+{% assign tags = type %}
+{%- for page in collections.sections | where: "tags", about -%}
 {{ page.templateContent }}
 {% endfor %}
