@@ -46,5 +46,5 @@ templateEngine: liquid,md
 {% assign tags = type %}
 {%- for page in collections.sections | where: tags, "about" -%}
 {{ page.templateContent }}
-{{ page.tags }}
+{{ page.data.tags }}
 {% endfor %}
