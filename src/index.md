@@ -42,10 +42,9 @@ templateEngine: liquid,md
 
 {% svg "github" %}
 
-{%- for content_types in collections.sections %}
-{% assign content_types.data.type = content_type %}
-{%- for page in collections.sections | where: content_type, "about" -%}
-{{ page.templateContent }}
+{%- for page in collections.sections -%}
+{% assign page.data.type = content_type %}
+{{ page.templateContent | where: content_type, "about" }}
 {{ page.data.type }}
 {% endfor %}
 {% endfor %}
