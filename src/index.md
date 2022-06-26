@@ -47,4 +47,3 @@ templateEngine: liquid,md
 {{ page.templateContent | where: content_type, "about" }}
 {{ page.data.type }}
 {% endfor %}
-{% endfor %}
