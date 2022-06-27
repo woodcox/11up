@@ -43,6 +43,11 @@ templateEngine: liquid,md
 {% svg "github" %}
 
 {%- for page in collections.sections -%}
+{%- assign crumbs = page.inputPath | split: '/' %}
+  {%- assign current_url = crumbs.last %}
+  {%- assign previous = section.inputPath | remove: current_url | split: '/' %}
+  {%- assign content_type = previous.last %}
 {{ page.templateContent | where: content_type, "about" }}
 {{ page.data.type }}
+{{ content_type }}
 {% endfor %}
