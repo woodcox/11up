@@ -36,7 +36,7 @@ templateEngine: liquid,md
 {%- assign crumbs = collection.inputPath | split: '/' %}
   {%- assign current_page = crumbs.last %}
   {%- assign previous = collection.inputPath | remove: current_page | split: '/' %}
-  {% capture type %}{{ previous.last }}{% endcapture %}
+  {% capture ctype %}{{ previous.last }}{% endcapture %}
 <p>{{ collection.inputPath }}</p>
 {%- endfor %}
 
