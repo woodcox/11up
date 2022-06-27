@@ -47,7 +47,7 @@ templateEngine: liquid,md
   {%- assign current_url = crumbs.last %}
   {%- assign previous = page.inputPath | remove: current_url | split: '/' %}
   {%- assign content_type = previous.last %}
-{{ page.templateContent | where: page.data.type, "about" }}
+{{ page.templateContent }}
 {{ page.data.type }}
 {{ content_type }}
 {% endfor %}
