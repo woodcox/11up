@@ -63,8 +63,9 @@ section_type: about
 {% elsif section_type == "about" %}{%- for section in collections.about -%}
 {{ section.templateContent }}
 {% endfor %}
-{% else section_type == "about" %}{%- for section in collections.media -%}
+{% else %}{%- for section in collections.media -%}
 {{ section.templateContent }}
+{% endfor %}
 {% endif %}
 
 {% svg "twitter" %}
