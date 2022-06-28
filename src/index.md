@@ -54,9 +54,3 @@ section_type: about
 {{ section.templateContent }}
 {% endfor %}
 {% endif %}
-
-{% svg "twitter" %}
-
-{%- for section in collections.home -%}
-{{ section.templateContent }}
-{% endfor %}
