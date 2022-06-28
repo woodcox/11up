@@ -57,10 +57,15 @@ section_type: about
 
 {% svg "instagram" %}
 
-{% if section_type == "home" %}{%- for section in collections.home -%}{% endif %}
-{% if section_type == "about" %}{%- for section in collections.about -%}{% endif %}
+{% if section_type == "home" %}{%- for section in collections.home -%}
 {{ section.templateContent }}
 {% endfor %}
+{% elsif section_type == "about" %}{%- for section in collections.about -%}
+{{ section.templateContent }}
+{% endfor %}
+{% else section_type == "about" %}{%- for section in collections.media -%}
+{{ section.templateContent }}
+{% endif %}
 
 {% svg "twitter" %}
 
