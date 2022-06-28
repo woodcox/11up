@@ -1,5 +1,6 @@
 ---
 templateEngine: liquid,md
+section_type: about
 ---
 
 # {{ title }}
@@ -56,7 +57,8 @@ templateEngine: liquid,md
 
 {% svg "instagram" %}
 
-{%- for section in collections.about -%}
+{% if section_type == "home" %}{%- for section in collections.home -%}{% endif %}
+{% if section_type == "about" %}{%- for section in collections.about -%}{% endif %}
 {{ section.templateContent }}
 {% endfor %}
 
