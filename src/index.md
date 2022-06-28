@@ -63,7 +63,7 @@ section_type: about
 {% elsif section_type == "about" %}{%- for section in collections.about -%}
 {{ section.templateContent }}
 {% endfor %}
-{% else %}{%- for section in collections.media -%}
+{% elsif section_type == "media" %}{%- for section in collections.media -%}
 {{ section.templateContent }}
 {% endfor %}
 {% endif %}
