@@ -53,3 +53,15 @@ templateEngine: liquid,md
 {{ page.data.type }}
 {{ content_type }}
 {% endfor %}
+
+{% svg "instagram" %}
+
+{%- for section in collections.about -%}
+{{ section.templateContent }}
+{% endfor %}
+
+{% svg "twitter" %}
+
+{%- for section in collections.home -%}
+{{ section.templateContent }}
+{% endfor %}
