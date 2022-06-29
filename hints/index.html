@@ -16,8 +16,8 @@
       <meta name="msapplication-TileColor" content="#da532c">
       <meta name="theme-color" content="#ffffff">
     
-    <link rel="stylesheet" href="/11up/assets/css/style.css?v=1656491322068"/>
-    <script defer src="/11up/assets/js/alpine.js?v=1656491322068"></script>
+    <link rel="stylesheet" href="/11up/assets/css/style.css?v=1656491377315"/>
+    <script defer src="/11up/assets/js/alpine.js?v=1656491377315"></script>
   </head>
   <body>
 
@@ -53,7 +53,7 @@
 <h1>Using front matter element in a liquid for loop</h1>
 <p>First add some front matter</p>
 <pre><code class="language-yaml">---
-section_type: about
+section_type: &quot;about&quot;
 ---
 </code></pre>
 <p>Use the [] syntax, for example collections[section_type]. See this <a href="https://github.com/11ty/eleventy/discussions/2028">11ty GitHub discussion</a> about dynamically accessing the properties.</p>
