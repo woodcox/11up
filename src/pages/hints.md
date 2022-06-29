@@ -23,7 +23,9 @@ section_type: "about"
 Use the [] syntax, for example collections[section_type]. See this [11ty GitHub discussion](https://github.com/11ty/eleventy/discussions/2028) about dynamically accessing the properties.
 
 ~~~liquid
+{% raw %}
 {%- for section in collections[section_type] -%}
 {{ section.templateContent }}
 {% endfor %}
+{% endraw %}
 ~~~
