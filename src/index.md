@@ -1,6 +1,7 @@
 ---
 templateEngine: liquid,md
 section_type: about
+collection_type: collections.about
 ---
 
 {% if section_type == "home" %}{%- for section in collections.home -%}
@@ -16,10 +17,6 @@ section_type: about
 
 {% svg "github" %}
 
-
-{% if section_type == "home" %}{%- for section in collections.home -%}
-{% elsif section_type == "about" %}{%- for section in collections.about -%}
-{% elsif section_type == "media" %}{%- for section in collections.media -%}
+{%- for section in collection_type -%}
 {{ section.templateContent }}
 {% endfor %}
-{% endif %}
