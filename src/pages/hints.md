@@ -6,9 +6,18 @@ tags: hint
 
 # liquid url filter = pathPrefix
 
-Deploy to https://wwodcock3.github.io/11up/ on GitHub pages without modifying your config. This allows you to use the same code-base to deploy to either GitHub pages or Netlify
+Deploy to https://woodcock3.github.io/11up/ on GitHub pages without modifying your config. This allows you to use the same code-base to deploy to either GitHub pages or Netlify
 
-Alter the package.json 'build:eleventy' script with npx @11ty/eleventy --pathprefix=11up
+Alter the package.json 'build:eleventy' script with npx @11ty/eleventy --pathprefix=11up. For example:
+
+~~~json
+{
+  "scripts": {
+    "build:eleventy": "ELEVENTY_ENV=dev npx @11ty/eleventy --pathprefix=11up",
+    "minify:eleventy": "ELEVENTY_ENV=prod npx @11ty/eleventy --pathprefix=11up"
+  },
+}
+~~~
 
 # Using front matter element in a liquid for loop
 
