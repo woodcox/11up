@@ -16,8 +16,8 @@
       <meta name="msapplication-TileColor" content="#da532c">
       <meta name="theme-color" content="#ffffff">
     
-    <link rel="stylesheet" href="/11up/assets/css/style.css?v=1656491377315"/>
-    <script defer src="/11up/assets/js/alpine.js?v=1656491377315"></script>
+    <link rel="stylesheet" href="/11up/assets/css/style.css?v=1656491741089"/>
+    <script defer src="/11up/assets/js/alpine.js?v=1656491741089"></script>
   </head>
   <body>
 
@@ -57,7 +57,12 @@ section_type: &quot;about&quot;
 ---
 </code></pre>
 <p>Use the [] syntax, for example collections[section_type]. See this <a href="https://github.com/11ty/eleventy/discussions/2028">11ty GitHub discussion</a> about dynamically accessing the properties.</p>
-<pre><code class="language-liquid"></code></pre>
+<pre><code class="language-liquid">
+{%- for section in collections[section_type] -%}
+{{ section.templateContent }}
+{% endfor %}
+
+</code></pre>
 
 </main>
 
