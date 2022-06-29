@@ -16,7 +16,7 @@ First add some front matter
 
 ~~~yaml
 ---
-section_type: about
+section_type: "about"
 ---
 ~~~
 
