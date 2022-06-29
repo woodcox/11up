@@ -16,8 +16,8 @@
       <meta name="msapplication-TileColor" content="#da532c">
       <meta name="theme-color" content="#ffffff">
     
-    <link rel="stylesheet" href="/11up/assets/css/style.css?v=1656492169403"/>
-    <script defer src="/11up/assets/js/alpine.js?v=1656492169403"></script>
+    <link rel="stylesheet" href="/11up/assets/css/style.css?v=1656492358503"/>
+    <script defer src="/11up/assets/js/alpine.js?v=1656492358503"></script>
   </head>
   <body>
 
@@ -48,8 +48,15 @@
 
 <main class="content" id="main-content" tabindex="-1">
 <h1>liquid url filter = pathPrefix</h1>
-<p>Deploy to https://wwodcock3.github.io/11up/ on GitHub pages without modifying your config. This allows you to use the same code-base to deploy to either GitHub pages or Netlify</p>
-<p>Alter the package.json 'build:eleventy' script with npx @11ty/eleventy --pathprefix=11up</p>
+<p>Deploy to https://woodcock3.github.io/11up/ on GitHub pages without modifying your config. This allows you to use the same code-base to deploy to either GitHub pages or Netlify</p>
+<p>Alter the package.json 'build:eleventy' script with npx @11ty/eleventy --pathprefix=11up. For example:</p>
+<pre><code class="language-json">{
+  &quot;scripts&quot;: {
+    &quot;build:eleventy&quot;: &quot;ELEVENTY_ENV=dev npx @11ty/eleventy --pathprefix=11up&quot;,
+    &quot;minify:eleventy&quot;: &quot;ELEVENTY_ENV=prod npx @11ty/eleventy --pathprefix=11up&quot;
+  },
+}
+</code></pre>
 <h1>Using front matter element in a liquid for loop</h1>
 <p>First add some front matter</p>
 <pre><code class="language-yaml">---
