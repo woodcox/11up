@@ -1,6 +1,6 @@
 ---
 templateEngine: liquid,md
-section_type: about
+section_type: "about"
 ---
 
 {% if section_type == "home" %}{%- for section in collections.home -%}
