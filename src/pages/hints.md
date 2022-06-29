@@ -10,7 +10,7 @@ Deploy to https://wwodcock3.github.io/11up/ on GitHub pages without modifying yo
 
 Alter the package.jason with npx @11ty/eleventy --pathprefix=11up
 
-# Using front mater element in a liquid for loop
+# Using front matter element in a liquid for loop
 
 First add some front matter 
 
@@ -20,7 +20,7 @@ section_type: about
 ---
 ~~~
 
-Use the [] syntax, for example collections[section_type]. See this [11ty GitHub discussion](https://github.com/11ty/eleventy/discussions/2028).
+Use the [] syntax, for example collections[section_type]. See this [11ty GitHub discussion](https://github.com/11ty/eleventy/discussions/2028) about dynamically accessing the properties.
 
 ~~~liquid
 {%- for section in collections[section_type] -%}
