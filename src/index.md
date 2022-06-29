@@ -17,7 +17,14 @@ collection_type: collections.about
 
 {% svg "github" %}
 
-{% assign type = collection_type %}
-{%- for section in type -%}
+{% case section_type %}
+  {% when "about" %}
+     {%- for section in collections.about -%}
+  {% when "home" %}
+     {%- for section in collections.home -%}
+  {% else %}
+     {%- for section in collections.all -%}
+{% endcase %}
+
 {{ section.templateContent }}
 {% endfor %}
