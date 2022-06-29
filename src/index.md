@@ -1,7 +1,6 @@
 ---
 templateEngine: liquid,md
 section_type: about
-collection_type: collections.about
 ---
 
 {% if section_type == "home" %}{%- for section in collections.home -%}
@@ -17,6 +16,7 @@ collection_type: collections.about
 
 {% svg "github" %}
 
+{% capture collection_type %}
 {% case section_type %}
   {% when "about" %}
      {%- for section in collections.about -%}
@@ -25,6 +25,8 @@ collection_type: collections.about
   {% else %}
      {%- for section in collections.all -%}
 {% endcase %}
+{% endcapture %}
 
+{% echo collection_type %}
 {{ section.templateContent }}
 {% endfor %}
