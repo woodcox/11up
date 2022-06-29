@@ -13,3 +13,13 @@ section_type: about
 {{ section.templateContent }}
 {% endfor %}
 {% endif %}
+
+{% svg "github" %}
+
+
+{% if section_type == "home" %}{%- for section in collections.home -%}
+{% elsif section_type == "about" %}{%- for section in collections.about -%}
+{% elsif section_type == "media" %}{%- for section in collections.media -%}
+{{ section.templateContent }}
+{% endfor %}
+{% endif %}
