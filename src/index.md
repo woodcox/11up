@@ -17,7 +17,7 @@ collection_type: collections.about
 
 {% svg "github" %}
 
-{% assign type == collection_type %}
+{% assign type = collection_type %}
 {%- for section in type -%}
 {{ section.templateContent }}
 {% endfor %}
