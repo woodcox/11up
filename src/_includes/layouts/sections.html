@@ -2,20 +2,16 @@
 layout: layouts/base.html
 ---
 
-
-{%- assign type = collection_type %}
-{% assign sections = collections.all.tags | where: collections.all.tags, type %}
-
+{%- for section in collections[section_type] -%}
 {%- assign crumbs = sections.inputPath | split: '/' %}
 {%- assign id = crumbs.last %}
-  {%- for page in sections %}
   <section id="{{id}}" class="content-section {{ bg-color }}">
     <article>
       <div class="{{ container-size }}{%- if container-size == "small" or container-size == "medium" %}-{%- endif %}container {{ style }}">
         {%- if title %}<h{{ heading }}>{{ title | upcase }}</h{{ heading }}>{% endif %}
         {%- capture font %}{% include components/impact-font.html %}{% endcapture %}
         {%- if impact-font %}{{ font }}{%- endif %}
-        {{ content }}
+        {{ section.templateContent }}
       </div>
     </article>
   </section>
