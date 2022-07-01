@@ -19,3 +19,5 @@ section_type: "about"
 {%- for section in collections[section_type] -%}
 {{ section.templateContent }}
 {% endfor %}
+
+{% render "partials/talking.php" %}
