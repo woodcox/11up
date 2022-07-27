@@ -3,7 +3,7 @@ on: [push]
 
 # Conditional environmental if's      
 env:
-  UPDATE_NPM: false # true = deploy eleventy , true = update npm
+  UPDATE_NPM: true # true = deploy eleventy , true = update npm
 
 jobs:
   build_deploy_eleventy:
