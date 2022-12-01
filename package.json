@@ -18,7 +18,7 @@
     "alpinejs": "^3.10.5",
     "autoprefixer": "^10.4.13",
     "eleventy-plugin-compress": "^1.0.4",
-    "esbuild": "^0.15.10",
+    "esbuild": "^0.15.16",
     "glob-all": "^3.3.0",
     "html-minifier": "^4.0.0",
     "htmx.org": "^1.8.2",
