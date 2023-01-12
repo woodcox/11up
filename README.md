@@ -1,7 +1,7 @@
 | ![11up](https://user-images.githubusercontent.com/64870518/159159826-4794d713-2a4b-433c-bfd3-aeb7aa244326.jpg) |
 | -------------------------------------------------------------------------------------------------------------- |
 
-# [11up](https://woodcock3.github.io/11up/)
+# [11up](https://woodcox.github.io/11up/)
 
 11up is a starter repo to test out how I could build websites fast using [Eleventy](https://www.11ty.dev), [Tailwind CSS](https://tailwindcss.com), and [Alpinejs](https://alpinejs.dev). [ESbuild](https://esbuild.github.io/) is also used as a JS build pipeline. I might make use of the css plugins for ESbuild in the future as this repo by [arslanakram](https://github.com/arslanakram/custom-esbuild-with-scss-purgecss-and-liveserver) has an interesting setup. Details of this set up are also available on [Stack Overflow](https://stackoverflow.com/questions/70325815/how-to-setup-custom-esbuild-with-scss-purgecss-liveserver).
 
@@ -9,7 +9,7 @@ I am hoping I can transfer my jekyll projects to the TEAstack + ESbuild.
 
 ## Live Demo
 
-[https://woodcock3.github.io/11up/](https://woodcock3.github.io/11up/)
+[https://woodcox.github.io/11up/](https://woodcock3.github.io/11up/)
 
 ### Technologies used:
 
@@ -27,7 +27,7 @@ I am hoping I can transfer my jekyll projects to the TEAstack + ESbuild.
 ### 1. Clone this repository
 
 ```
-git clone https://github.com/woodcock3/11up.git my-website-name
+git clone https://github.com/woodcox/11up.git my-website-name
 ```
 
 ### 2. Navigate to the directory
