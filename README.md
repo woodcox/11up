@@ -9,7 +9,7 @@ I am hoping I can transfer my jekyll projects to the TEAstack + ESbuild.
 
 ## Live Demo
 
-[https://woodcox.github.io/11up/](https://woodcock3.github.io/11up/)
+[https://woodcox.github.io/11up/](https://woodcox.github.io/11up/)
 
 ### Technologies used:
 
@@ -19,7 +19,7 @@ I am hoping I can transfer my jekyll projects to the TEAstack + ESbuild.
 - [Tailwind CSS](https://tailwindcss.com/)
 - [ESbuild](https://esbuild.github.io/)
 
-<a href="https://app.netlify.com/start/deploy?repository=https://github.com/woodcock3/11up&amp;stack=cms"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" /></a>
+<a href="https://app.netlify.com/start/deploy?repository=https://github.com/woodcox/11up&amp;stack=cms"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" /></a>
 
 ## Getting Started
 
