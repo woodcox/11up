@@ -6,7 +6,7 @@ tags: hint
 
 # liquid url filter = pathPrefix
 
-Deploy to https://woodcock3.github.io/11up/ on GitHub pages without modifying your config. This allows you to use the same code-base to deploy to either GitHub pages or Netlify
+Deploy to https://woodcox.github.io/11up/ on GitHub pages without modifying your config. This allows you to use the same code-base to deploy to either GitHub pages or Netlify
 
 Alter the package.json 'build:eleventy' script with npx @11ty/eleventy --pathprefix=11up. For example:
 
