@@ -57,7 +57,7 @@ jobs:
       # - run: npm update # update packages
       - name: pull request on npm update
         if: env.UPDATE_NPM == 'true'
-        uses: woodcock3/create-pull-request@v3
+        uses: peter-evans/create-pull-request@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: Update dependencies
